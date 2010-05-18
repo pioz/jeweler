@@ -21,6 +21,7 @@ class Jeweler
   autoload :GemcutterTasks, 'jeweler/gemcutter_tasks'
   autoload :RubyforgeTasks, 'jeweler/rubyforge_tasks'
   autoload :Specification,  'jeweler/specification'
+  autoload :DebTasks,       'jeweler/deb_tasks'
 
   attr_reader :gemspec, :gemspec_helper, :version_helper
   attr_accessor :base_dir, :output, :repo, :commit
