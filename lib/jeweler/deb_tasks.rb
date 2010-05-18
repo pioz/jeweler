@@ -199,6 +199,13 @@ EOF
           end
         end
 
+        desc 'Create the package structure inside ./deb/ directory and build it'
+        task :make do
+          Rake::Task['deb:clean'].execute
+          Rake::Task['deb:create_structure'].execute
+          Rake::Task['deb:build'].execute
+        end
+
         desc 'Remove ./deb/ directory'
         task :clean do
           if File.exists?('deb/')
